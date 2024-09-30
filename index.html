@@ -1,28 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Research Supplement</title>
-<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-<script defer src="https://pyscript.net/latest/pyscript.js"></script>
-
+    <title>Research Supplement</title>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <style>
+        /* Styling for the code block */
+        .code-block {
+            display: none; /* Initially hidden */
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+            white-space: pre-wrap; /* Preserve whitespace and formatting */
+            overflow-x: auto; /* Enable horizontal scrolling for long code */
+        }
+    </style>
 </head>
 <body>
 
 <h1>My research at University of Michigan</h1>
 <p>Various graphs made for various events. In total there were 115 events my code plotted.</p>
 <img src="combinedplot.png" alt="combinedplot.png">
-<p>Each colored line represents an energy channel on the GOES13 satellite. The peaks are marked by stars. This plot combines the 1 day background period(yellow), with the 3 day event period(orange).</p>
+<p>Each colored line represents an energy channel on the GOES13 satellite. The peaks are marked by stars. This plot combines the 1 day background period (yellow), with the 3 day event period (orange).</p>
 <img src="plotflux.png" alt="plotflux.png">
 <p>This graph shows the energy and flux against Energy Channel (MeVs)</p>
 <img src="logscaleflux.png" alt="logscaleflux.png">
 <p>This graph is similar to the previous one, but the Energy Channels are placed according to their MeV value on a log scale, so it is clear which sensors have what values.</p>
 <img src="eventplot.png" alt="eventplot.png">
 <img src="bgplot.png" alt="bgplot.png">
-<p>These graphs show the event and the background for one channel.
-Below are some scripts I wrote for this research.</p>
-<py-script src="datadownloaderhome.py"></py-script>
-<py-script src="combinedeventplotter.py"></py-script>
-<py-script src="fluxplotter.py"></py-script>
+<p>These graphs show the event and the background for one channel.</p>
+<p>Below are some scripts I wrote for this research:</p>
+
+<!-- Toggle Button for Script 1 -->
+<button onclick="toggleCode('code1')">Show/Hide Script 1: datadownloaderhome.py</button>
+
+<!-- Code Block for Script 1 -->
+<div id="code1" class="code-block">
+<code>
+print('hello world from datadownloaderhome.py')
+</code>
+</div>
+
+<!-- Toggle Button for Script 2 -->
+<button onclick="toggleCode('code2')">Show/Hide Script 2: combinedeventplotter.py</button>
+
+<!-- Code Block for Script 2 -->
+<div id="code2" class="code-block">
+<code>
+print('hello world from combinedeventplotter.py')
+</code>
+</div>
+
+<!-- Toggle Button for Script 3 -->
+<button onclick="toggleCode('code3')">Show/Hide Script 3: fluxplotter.py</button>
+
+<!-- Code Block for Script 3 -->
+<div id="code3" class="code-block">
+<code>
+print('hello world from fluxplotter.py')
+</code>
+</div>
+
+<script>
+    // JavaScript function to toggle the code visibility
+    function toggleCode(id) {
+        var codeBlock = document.getElementById(id);
+        if (codeBlock.style.display === "none") {
+            codeBlock.style.display = "block"; // Show the code block
+        } else {
+            codeBlock.style.display = "none"; // Hide the code block
+        }
+    }
+</script>
 
 </body>
 </html>
