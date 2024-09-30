@@ -4,13 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research Supplement</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        p {
+            margin-bottom: 15px; /* Adds space between paragraphs */
+        }
+    </style>
 </head>
 <body>
 
 <h1>My Research at University of Michigan</h1>
-<p>Various graphs made for various events. In total there were 115 events my code plotted.</p>
+<p>Various graphs made for various events. In total, there were 115 events my code plotted.</p>
 <img src="combinedplot.png" alt="combinedplot.png">
-<p>Each colored line represents an energy channel on the GOES13 satellite. The peaks are marked by stars. This plot combines the 1 day background period (yellow), with the 3 day event period (orange).</p>
+<p>Each colored line represents an energy channel on the GOES13 satellite. The peaks are marked by stars. This plot combines the 1 day background period (yellow) with the 3 day event period (orange).</p>
 <img src="plotflux.png" alt="plotflux.png">
 <p>This graph shows the energy and flux against Energy Channel (MeVs).</p>
 <img src="logscaleflux.png" alt="logscaleflux.png">
@@ -22,7 +31,7 @@
 <h2>View Python Scripts</h2>
 
 <p>
-    datadownloaderhome.py scrapes the database from the ./avg directory on https://www.ngdc.noaa.gov/stp/satellite/goes/dataaccess.html<br>
+    datadownloaderhome.py scrapes the database from the ./avg directory on <a href="https://www.ngdc.noaa.gov/stp/satellite/goes/dataaccess.html">https://www.ngdc.noaa.gov/stp/satellite/goes/dataaccess.html</a>.<br>
     It then downloads the data to be used for plotting and other analysis.<br>
     <a href="https://raw.githubusercontent.com/atrintchouk/University-of-Michigan-Research/refs/heads/main/datadownloaderhome.py" download>
         <button>View datadownloaderhome.py</button>
@@ -30,14 +39,14 @@
 </p>
 
 <p>
-    combinedeventplotter.py makes the "combined" plots that have the background and the event<br>
+    combinedeventplotter.py makes the "combined" plots that have the background and the event.<br>
     <a href="https://raw.githubusercontent.com/atrintchouk/University-of-Michigan-Research/refs/heads/main/combinedeventplotter.py" download>
         <button>View combinedeventplotter.py</button>
     </a>
 </p>
     
 <p>
-    fluxplotter.py makes the plots that show the flux and energy for the 6 channels<br>
+    fluxplotter.py makes the plots that show the flux and energy for the 6 channels.<br>
     <a href="https://raw.githubusercontent.com/atrintchouk/University-of-Michigan-Research/refs/heads/main/fluxplotter.py" download>
         <button>View fluxplotter.py</button>
     </a>
